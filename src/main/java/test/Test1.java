@@ -1,15 +1,10 @@
 package test;
 
-import static org.junit.Assert.assertEquals;
-
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Set;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -48,9 +43,13 @@ public class Test1 {
 	}
 
 	@Test
-	public void test1() throws InterruptedException {
-		MobileElement el1 = (MobileElement) driver.findElementById("com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/fab");
+	public void test() throws InterruptedException {
+		MobileElement el1 = (MobileElement) driver.findElementByAccessibilityId(test1.menuButtonPath);
 		el1.click();
+		MobileElement el2 = (MobileElement) driver.findElementByXPath(test1.initDataPath);
+		el2.click();
+		MobileElement el3 = (MobileElement) driver.findElementById(test1.showListPath);
+		el3.click();
 	}
 
 	@After
