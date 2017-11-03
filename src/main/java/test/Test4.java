@@ -60,6 +60,9 @@ public class Test4 {
 		MobileElement el3 = (MobileElement) driver.findElementByXPath(test4.selectedDateTrickPath);
 		el3.click();
 		
+		//driver.wait(500);
+		Thread.sleep(200);
+		
 		(new TouchAction(driver))
 		  .press(523,1038)
 		  .moveTo(-3, -474)
@@ -69,8 +72,11 @@ public class Test4 {
 		MobileElement el4 = (MobileElement) driver.findElementById(test4.selectPlacesPath);
 		el4.click();
 		
-		MobileElement el5 = (MobileElement) driver.findElementById("com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/button1");
-		el5.click();
+		//Thread.sleep(500);
+		//MobileElement el5 = (MobileElement) driver.findElementById("com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/button1");
+		//el5.click();
+		Integer[] places = new Integer[] {1,8,22,32,34};
+		test4.selectPlaces(driver, places);
 	}
 
 	@After

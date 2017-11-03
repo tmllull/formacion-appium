@@ -23,13 +23,13 @@ public class Test4Options {
 	
 	public void setPlacesPath() {
 		for (int i = 1; i <= 40; ++i) {
-			this.placesPath.put(i, "com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/button"+i+"");
+			this.placesPath.put(i, "com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/button"+i);
 		}
 	}
 	
 	public void selectPlaces(AppiumDriver driver, Integer[] places) {
 		for (int i = 0; i < places.length; ++i) {
-			driver.findElementByXPath(this.placesPath.get(places[i])).click();
+			driver.findElementById(this.placesPath.get(places[i])).click();
 		}
 		return;
 	}
