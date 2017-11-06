@@ -1,4 +1,4 @@
-package test;
+package solutions;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -9,8 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import domain.ConfigOptions;
-import domain.Test1Options;
-import domain.Utils;
+import solutions.Test2Options;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -19,13 +18,11 @@ import io.appium.java_client.android.AndroidDriver;
  * General Test
  *
  */
-public class Test8 {
+public class Test2 {
 
 	AppiumDriver driver;
 	ConfigOptions options = new ConfigOptions();
-	Test1Options test1 = new Test1Options();
-	Utils utils = new Utils();
-	private String orig_context;
+	Test2Options test2 = new Test2Options();
 	WebDriverWait wait;
 	// HashMap<String, Integer> games = new HashMap<String, Integer>();
 
@@ -44,6 +41,17 @@ public class Test8 {
 
 	@Test
 	public void test() throws InterruptedException {
+		MobileElement el1 = (MobileElement) driver.findElementById(test2.showListPath);
+		el1.click();
+		MobileElement el2 = (MobileElement) driver.findElementByXPath(test2.selectedShowPath);
+		el2.click();
+		
+		//TRICK
+		//MobileElement el2 = (MobileElement) driver.findElementByXPath(test2.selectedShowTrick);
+		//el2.click();
+		
+		MobileElement el3 = (MobileElement) driver.findElementByXPath(test2.selectedDatePath);
+		el3.click();
 
 	}
 

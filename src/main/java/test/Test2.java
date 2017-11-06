@@ -5,13 +5,11 @@ import java.net.URL;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import domain.ConfigOptions;
 import domain.Test2Options;
-import domain.Utils;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -25,10 +23,7 @@ public class Test2 {
 	AppiumDriver driver;
 	ConfigOptions options = new ConfigOptions();
 	Test2Options test2 = new Test2Options();
-	Utils utils = new Utils();
-	private String orig_context;
 	WebDriverWait wait;
-	// HashMap<String, Integer> games = new HashMap<String, Integer>();
 
 	@Before
 	public void openTest() throws InterruptedException {
@@ -45,23 +40,11 @@ public class Test2 {
 
 	@Test
 	public void test() throws InterruptedException {
-		MobileElement el1 = (MobileElement) driver.findElementById(test2.showListPath);
-		el1.click();
-		MobileElement el2 = (MobileElement) driver.findElementByXPath(test2.selectedShowPath);
-		el2.click();
 		
-		//TRICK
-		//MobileElement el2 = (MobileElement) driver.findElementByXPath(test2.selectedShowTrick);
-		//el2.click();
-		
-		MobileElement el3 = (MobileElement) driver.findElementByXPath(test2.selectedDatePath);
-		el3.click();
-
 	}
 
 	@After
 	public void closeTest() throws InterruptedException {
-		// Thread.sleep(5000);
-		// driver.quit();
+		
 	}
 }

@@ -1,5 +1,7 @@
 package test;
 
+import static org.junit.Assert.assertEquals;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import org.junit.After;
@@ -9,10 +11,10 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import domain.ConfigOptions;
-import domain.Test1Options;
-import domain.Utils;
+import domain.Test5Options;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 
 /**
@@ -23,11 +25,8 @@ public class Test5 {
 
 	AppiumDriver driver;
 	ConfigOptions options = new ConfigOptions();
-	Test1Options test1 = new Test1Options();
-	Utils utils = new Utils();
-	private String orig_context;
+	Test5Options test5 = new Test5Options();
 	WebDriverWait wait;
-	// HashMap<String, Integer> games = new HashMap<String, Integer>();
 
 	@Before
 	public void openTest() throws InterruptedException {
@@ -44,12 +43,11 @@ public class Test5 {
 
 	@Test
 	public void test() throws InterruptedException {
-
+		
 	}
 
 	@After
 	public void closeTest() throws InterruptedException {
-		// Thread.sleep(5000);
-		// driver.quit();
+		
 	}
 }
