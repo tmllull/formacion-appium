@@ -1,4 +1,4 @@
-package solutions;
+package dataTypesSolutions;
 
 public class Exercise3 {
 
