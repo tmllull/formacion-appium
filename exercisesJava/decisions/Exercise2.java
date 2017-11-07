@@ -3,31 +3,26 @@ package decisions;
 import java.util.Scanner;
 
 public class Exercise2 {
-	/*Write a Java program to to find the largest of three numbers.
+	/*
+	 * Write a Java program to to find the largest of three numbers.
+	 * 
+	 * Test Data Input the 1st number: 25 Input the 2nd number: 78 Input the 3rd
+	 * number: 87
+	 */
 
-	Test Data
-	Input the 1st number: 25 
-	Input the 2nd number: 78 
-	Input the 3rd number: 87 */
-	
-	public static void main(String [] args) {
-		
+	public static void main(String[] args) {
+
 		Scanner in = new Scanner(System.in);
-		   
+
 		System.out.print("Input the 1st number: ");
 		int num1 = in.nextInt();
-		   
+
 		System.out.print("Input the 2nd number: ");
 		int num2 = in.nextInt();
-		   
+
 		System.out.print("Input the 3rd number: ");
 		int num3 = in.nextInt();
-		
-		
+
 	}
-	
-	
-	
-	
 
 }
