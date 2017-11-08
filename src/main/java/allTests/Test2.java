@@ -1,39 +1,37 @@
 package allTests;
 
-import java.net.MalformedURLException;
-import java.net.URL;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
-import domain.ConfigOptions;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.android.AndroidDriver;
 
 /**
  * General Test
  *
  */
 public class Test2 {
-	
-	 public Test2(AppiumDriver driver, allTests.Test2Options test2) {
-		 MobileElement el1 = (MobileElement) driver.findElementById(test2.showListPath);
+
+	public Test2(AppiumDriver driver, allTests.Test2Options test2, ExtentReports extentreports,
+			ExtentTest extendedtest) {
+		try {
+			extendedtest = extentreports.startTest("Select show");
+			 extendedtest.log(LogStatus.INFO, "Driver is up and running " + driver);
+			 extendedtest.log(LogStatus.INFO, "Application is up and running");
+			MobileElement el1 = (MobileElement) driver.findElementById(test2.showListPath);
 			el1.click();
-			MobileElement el2 = (MobileElement) driver.findElementByXPath(test2.selectedShowPath);
+			extendedtest.log(LogStatus.PASS, "Shows list");
+			// TRICK
+			MobileElement el2 = (MobileElement) driver.findElementByXPath(test2.selectedShowTrickPath);
 			el2.click();
-			
-			//TRICK
-			//MobileElement el2 = (MobileElement) driver.findElementByXPath(test2.selectedShowTrick);
-			//el2.click();
-			
+			extendedtest.log(LogStatus.PASS, "Show selected correctly");
+
 			MobileElement el3 = (MobileElement) driver.findElementByXPath(test2.selectedDatePath);
 			el3.click();
+			extendedtest.log(LogStatus.PASS, "Selected date and show info");
+		} catch (Exception e) {
+			extendedtest.log(LogStatus.FAIL, e);
+		}
 	}
-
-	
-
-	
 }
