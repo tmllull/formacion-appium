@@ -65,6 +65,11 @@ public class Test4 {
 		  .release()
 		  .perform();
 		
+		//TRICK
+		/*
+		 * driver.scrollTo("Seleccionar butacas");
+		 */
+		
 		MobileElement el4 = (MobileElement) driver.findElementById(test4.selectPlacesPath);
 		el4.click();
 		test4.selectPlaces(driver, test4.places);

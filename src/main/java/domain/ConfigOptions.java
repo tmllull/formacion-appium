@@ -9,10 +9,10 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class ConfigOptions {
 	private static final String APPIUM_LOCAL_URL = "http://127.0.0.1:4723/wd/hub";
 	//private static final String APP_PATH = "C:\\Users\\Appium Automation\\Documents\\teatre-mallorca.apk";
-	private static final String APP_PATH = "C:\\Users\\allullam\\Documents\\teatre-mallorca.apk";
+	//private static final String APP_PATH = "C:\\Users\\allullam\\Documents\\teatre-mallorca.apk";
 	private static final String PLATFORM_VERSION = "5.1.1";
 	private static final String DEVICE_NAME = "Moto G";
-	//private static final String APP_PATH = "D:\\Users\\jualvare\\Downloads\\SELAE_INT7_8.1.01.apk";
+	private static final String APP_PATH = "D:\\Users\\jualvare\\Downloads\\teatre_mallorca.apk";
 	//private static final String DEVICE_UDID = "08eef699f1421cd5"; // NEXUS 5
 	//private static final String DEVICE_UDID = "5e29f967"; // NOTE 3
 	//private static final String DEVICE_UDID = "192.168.229.101:5555";
