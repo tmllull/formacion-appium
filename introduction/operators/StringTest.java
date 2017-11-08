@@ -20,7 +20,7 @@ public class StringTest {
 		System.in.read();
 		System.out.println("");
 		System.out.println("---------------CONCAT-------------");
-		
+
 		System.in.read();
 		// Declaring the String Variables
 		String sPopularTopic_1 = "String Introduction";
@@ -46,9 +46,9 @@ public class StringTest {
 		// "String1" + String + "String2";
 		System.out.println("Fourth Output");
 		System.out.println("String Introduction" + sSpace + "Basic Java Tutorial");
-		
+
 		System.in.read();
-		
+
 		// Declaring the String
 		sPopularTopic_1 = "String Introduction";
 		sPopularTopic_2 = "Basic Java Tutorial";
@@ -61,7 +61,7 @@ public class StringTest {
 		// 'false'
 		boolean bCompareResult = sPopularTopic_1.equals(sPopularTopic_2);
 		System.out.println("The result of String Comparison is : " + bCompareResult);
-		
+
 		System.in.read();
 		System.out.println("");
 		System.out.println("-----------CHARACTER AT (Position)-----------");
@@ -89,7 +89,6 @@ public class StringTest {
 		int iIndex = sPopularTopic_1.indexOf("Introduction");
 		System.out.println("The start index of the string Introduction is : " + iIndex);
 
-		
 		System.in.read();
 		System.out.println("");
 		System.out.println("-----------SUBSTRING-----------");
@@ -123,7 +122,7 @@ public class StringTest {
 		// Split: It breaks the string in to two parts from the passed argument and
 		// store it in to array
 		String[] aSplit = sPopularTopic_2.split("Java");
-		System.out.println("The original String is: "+sPopularTopic_2);
+		System.out.println("The original String is: " + sPopularTopic_2);
 		System.out.println("The first part of the array is : " + aSplit[0]);
 		System.out.println("The last part of the array is : " + aSplit[1]);
 	}

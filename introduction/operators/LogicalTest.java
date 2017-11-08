@@ -11,8 +11,8 @@ public class LogicalTest {
 		System.out.println("LOGICAL OPERATORS");
 		System.in.read();
 		System.in.read();
-		System.out.println("First bool = "+Output_1);
-		System.out.println("Second bool = "+Output_2);
+		System.out.println("First bool = " + Output_1);
+		System.out.println("Second bool = " + Output_2);
 		System.in.read();
 		System.in.read();
 		System.out.println("Operator 'and' (&&)");
@@ -31,7 +31,7 @@ public class LogicalTest {
 		System.in.read();
 		System.in.read();
 		System.out.println("Change the state of the Output_1 to false : " + (!Output_1));
- 
+
 	}
 
 }
