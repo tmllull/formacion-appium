@@ -29,6 +29,7 @@ public class Test1 {
 				MobileElement el3 = (MobileElement) driver.findElementById(test1.showListPath);
 				el3.click();
 				extendedtest.log(LogStatus.PASS, "Shows list is accessible");
+				extendedtest.log(LogStatus.INFO, "Test1 finalized, driver is closed");
 		} catch (Exception e) {
 			extendedtest.log(LogStatus.FAIL, e);
 		}

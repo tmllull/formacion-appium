@@ -30,6 +30,7 @@ public class Test2 {
 			MobileElement el3 = (MobileElement) driver.findElementByXPath(test2.selectedDatePath);
 			el3.click();
 			extendedtest.log(LogStatus.PASS, "Selected date and show info");
+			extendedtest.log(LogStatus.INFO, "Test2 finalized, driver is closed");
 		} catch (Exception e) {
 			extendedtest.log(LogStatus.FAIL, e);
 		}

@@ -42,7 +42,7 @@ public class Test3 {
 			//extendedtest.log(LogStatus.PASS, "");
 			MobileElement el7 = (MobileElement) driver.findElementById(test3.dataStartPath);
 			el7.click();
-			extendedtest.log(LogStatus.PASS, "");
+			extendedtest.log(LogStatus.PASS, "Get date "+el6.getText());
 			MobileElement el8 = (MobileElement) driver.findElementByAccessibilityId(test3.dayStartPath);
 			el8.click();
 			extendedtest.log(LogStatus.PASS, "Selected init date");
@@ -73,6 +73,8 @@ public class Test3 {
 			MobileElement el17 = (MobileElement) driver.findElementById(test3.saveButtonPath);
 			el17.click();
 			extendedtest.log(LogStatus.PASS, "Changes saved");
+			extendedtest.log(LogStatus.INFO, "Test finalized, driver is closed");
+
 			
 		} catch (Exception e) {
 			extendedtest.log(LogStatus.FAIL, e);		}

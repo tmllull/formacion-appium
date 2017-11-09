@@ -9,7 +9,7 @@ public class Test4Options {
 	public String selectedShowPath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.View/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TextView";
 	public String selectedShowTrickPath = "//android.widget.TextView[@text='EL REY LEON']";
 	public String selectedDatePath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.View/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TextView";
-	public String selectedDateTrickPath = "//android.widget.TextView[@text='Domingo, 3/12/17']";
+	public String selectedDateTrickPath = "//android.widget.TextView[@text='Viernes, 1/12/17']";
 	public String selectPlacesPath = "com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/iv_comprar_entrades";
 	public Integer[] places = new Integer[] {3,4,13};
 	public String buyPath = "com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/iv_compra_pati_butaques";

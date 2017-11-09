@@ -50,7 +50,7 @@ public class Test5 {
 			el4.click();
 			extendedtest.log(LogStatus.PASS, "Start selecting places");
 			
-			Integer[] places = new Integer[] {1,8,22,32,34};
+			Integer[] places = new Integer[] {1,8,18,33,34};
 			Integer partialPrice = price*places.length;
 			test5.selectPlaces(driver, places);
 			extendedtest.log(LogStatus.PASS, "Places selected: "+places.toString());
@@ -68,6 +68,8 @@ public class Test5 {
 			extendedtest.log(LogStatus.PASS, "Total price is "+totalPrice);
 			assertEquals(partialPrice, totalPrice);
 			extendedtest.log(LogStatus.PASS, "Price coincident");
+			extendedtest.log(LogStatus.INFO, "Test finalized, driver is closed");
+
 			
 		} catch (Exception e) {
 			extendedtest.log(LogStatus.FAIL, e);		}

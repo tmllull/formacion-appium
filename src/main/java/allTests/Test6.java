@@ -53,6 +53,8 @@ public class Test6 {
 			}
 			assertEquals(dates.size() / 3, counter);
 			extendedtest.log(LogStatus.PASS, "Days coincidence");
+			extendedtest.log(LogStatus.INFO, "Test finalized, driver is closed");
+
 		} catch (Exception e) {
 			extendedtest.log(LogStatus.FAIL, e);
 		}

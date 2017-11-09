@@ -22,7 +22,7 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class GeneralTest {
 
-	static AppiumDriver driver;
+	AppiumDriver driver;
 	ConfigOptions options = new ConfigOptions();
 	Test1Options test1 = new Test1Options();
 	Test2Options test2 = new Test2Options();
@@ -63,7 +63,7 @@ public class GeneralTest {
 
 	}
 
-	/*@Test
+	@Test
 	public void Test2() {
 		Test2 test = new Test2(driver, test2, extentreports, extendedtest);
 
@@ -91,7 +91,7 @@ public class GeneralTest {
 	public void Test6() {
 		Test6 test = new Test6(driver, test6, extentreports, extendedtest);
 
-	}*/
+	}
 
 	@After
 	public void closeTest() {
@@ -99,11 +99,10 @@ public class GeneralTest {
 	}
 	
 	@AfterClass
-	public static void clean() {
-		extendedtest.log(LogStatus.INFO, "Execution finalized, driver is closed");
+	public static  void clean() {
 		extentreports.endTest(extendedtest);
 		extentreports.flush();
-		driver.quit();
+		//driver.quit();
 
 	}
 

@@ -14,7 +14,7 @@
     <protocol>https</protocol>
     
     <!-- title of the document -->
-    <documentTitle>Volkswagen ICP Portal</documentTitle>
+    <documentTitle>Formación Appium Test</documentTitle>
     
     <!-- report name - displayed at top-nav -->
     <reportName>Automated Report</reportName>

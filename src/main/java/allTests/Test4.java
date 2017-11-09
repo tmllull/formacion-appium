@@ -71,6 +71,8 @@ public class Test4 {
 			MobileElement el10 = (MobileElement) driver.findElementById(test4.confirmPath);
 			el10.click();
 			extendedtest.log(LogStatus.PASS, "Buy completed");
+			extendedtest.log(LogStatus.INFO, "Test finalized, driver is closed");
+
 		} catch (Exception e) {
 			extendedtest.log(LogStatus.FAIL, e);		}
 		
