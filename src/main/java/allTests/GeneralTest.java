@@ -12,6 +12,7 @@ import org.junit.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.relevantcodes.extentreports.DisplayOrder;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -37,7 +38,7 @@ public class GeneralTest {
 	@BeforeClass
 	public static void createReport() {
 		extentreports = new ExtentReports(
-				System.getProperty("user.dir") + "/reports/Teatre_Mallorca.html", true);
+				System.getProperty("user.dir") + "/reports/Teatre_Mallorca.html", false);
 		extentreports.addSystemInfo("HostName", "CursoAppium");
 		extentreports.addSystemInfo("Enviroment", "QA");
 		extentreports.addSystemInfo("User Name", "Juan y Toni");

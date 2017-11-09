@@ -23,8 +23,8 @@ public class Test6 {
 			ExtentTest extendedtest) {
 		try {
 			extendedtest = extentreports.startTest("Day filter");
-			 extendedtest.log(LogStatus.INFO, "Driver is up and running " + driver);
-			 extendedtest.log(LogStatus.INFO, "Application is up and running");
+			extendedtest.log(LogStatus.INFO, "Driver is up and running " + driver);
+			extendedtest.log(LogStatus.INFO, "Application is up and running");
 			MobileElement el1 = (MobileElement) driver.findElementById(test6.showListPath);
 			el1.click();
 			extendedtest.log(LogStatus.PASS, "Shows list");
@@ -40,7 +40,7 @@ public class Test6 {
 			extendedtest.log(LogStatus.PASS, "Day Filter");
 			MobileElement el5 = (MobileElement) driver.findElementByXPath(test6.filterDays.get(test6.filterDay));
 			el5.click();
-			extendedtest.log(LogStatus.PASS, "Selected "+test6.filterDay+" filter");
+			extendedtest.log(LogStatus.PASS, "Selected " + test6.filterDay + " filter");
 			List<WebElement> dates = driver.findElementById(test6.listViewDate)
 					.findElements(By.className(test6.textDate));
 			int counter = 0;
@@ -56,6 +56,8 @@ public class Test6 {
 			extendedtest.log(LogStatus.INFO, "Test finalized, driver is closed");
 
 		} catch (Exception e) {
+			extendedtest.log(LogStatus.FAIL, e);
+		} catch (AssertionError e) {
 			extendedtest.log(LogStatus.FAIL, e);
 		}
 

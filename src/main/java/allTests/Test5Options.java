@@ -7,9 +7,9 @@ import io.appium.java_client.AppiumDriver;
 public class Test5Options {
 	public String showListPath = "com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/bt_llistar_obres_main";
 	public String selectedShowPath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.View/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TextView";
-	public String selectedShowTrickPath = "//android.widget.TextView[@text='EL REY LEON']";
+	public String selectedShowTrickPath = "//android.widget.TextView[@text='CACAHUETE']";
 	public String selectedDatePath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.View/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TextView";
-	public String selectedDateTrickPath = "//android.widget.TextView[@text='Lunes, 4/12/17']";
+	public String selectedDateTrickPath = "//android.widget.TextView[@text='Jueves, 23/11/17']";
 	public String selectPlacesPath = "com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/iv_comprar_entrades";
 	public HashMap<Integer, String> placesPath = new HashMap<Integer, String>();
 	public String pricePath = "com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/tv_Preu_Info";

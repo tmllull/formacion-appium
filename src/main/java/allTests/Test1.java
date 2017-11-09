@@ -32,6 +32,8 @@ public class Test1 {
 				extendedtest.log(LogStatus.INFO, "Test1 finalized, driver is closed");
 		} catch (Exception e) {
 			extendedtest.log(LogStatus.FAIL, e);
+		}catch (AssertionError e) {
+			extendedtest.log(LogStatus.FAIL, e);
 		}
 		
 	}

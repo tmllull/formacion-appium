@@ -21,35 +21,36 @@ public class Test4 {
 	ConfigOptions options = new ConfigOptions();
 	Test4Options test4 = new Test4Options();
 	WebDriverWait wait;
-	
-	public Test4(AppiumDriver driver, allTests.Test4Options test4, ExtentReports extentreports, ExtentTest extendedtest) throws InterruptedException {
+
+	public Test4(AppiumDriver driver, allTests.Test4Options test4, ExtentReports extentreports, ExtentTest extendedtest)
+			throws InterruptedException {
 		try {
 			extendedtest = extentreports.startTest("Buy tickets");
-			 extendedtest.log(LogStatus.INFO, "Driver is up and running " + driver);
-			 extendedtest.log(LogStatus.INFO, "Application is up and running");
+			extendedtest.log(LogStatus.INFO, "Driver is up and running " + driver);
+			extendedtest.log(LogStatus.INFO, "Application is up and running");
 			MobileElement el1 = (MobileElement) driver.findElementById(test4.showListPath);
 			el1.click();
 			extendedtest.log(LogStatus.PASS, "Shows list");
-			
-			//TRICK
+
+			// TRICK
 			MobileElement el2 = (MobileElement) driver.findElementByXPath(test4.selectedShowTrickPath);
 			el2.click();
 			extendedtest.log(LogStatus.PASS, "Show selected");
-			
-			//TRICK
+
+			// TRICK
 			MobileElement el3 = (MobileElement) driver.findElementByXPath(test4.selectedDateTrickPath);
 			el3.click();
 			extendedtest.log(LogStatus.PASS, "Date selected");
-			
+
 			Thread.sleep(200);
-			//TRICK
+			// TRICK
 			driver.scrollTo("Seleccionar butacas");
-			
+
 			MobileElement el4 = (MobileElement) driver.findElementById(test4.selectPlacesPath);
 			el4.click();
 			extendedtest.log(LogStatus.PASS, "Start selecting places");
 			test4.selectPlaces(driver, test4.places);
-			extendedtest.log(LogStatus.PASS, "Places selected: "+test4.places.toString());
+			extendedtest.log(LogStatus.PASS, "Places selected: " + test4.places.toString());
 			MobileElement el5 = (MobileElement) driver.findElementById(test4.buyPath);
 			el5.click();
 			extendedtest.log(LogStatus.PASS, "Proceed to buy");
@@ -67,15 +68,18 @@ public class Test4 {
 			MobileElement el9 = (MobileElement) driver.findElementById(test4.lastNamePath);
 			el9.sendKeys(test4.lastname);
 			extendedtest.log(LogStatus.PASS, "Lastname sended");
-			driver.navigate().back(); 
+			driver.navigate().back();
 			MobileElement el10 = (MobileElement) driver.findElementById(test4.confirmPath);
 			el10.click();
 			extendedtest.log(LogStatus.PASS, "Buy completed");
 			extendedtest.log(LogStatus.INFO, "Test finalized, driver is closed");
 
 		} catch (Exception e) {
-			extendedtest.log(LogStatus.FAIL, e);		}
-		
+			extendedtest.log(LogStatus.FAIL, e);
+		} catch (AssertionError e) {
+			extendedtest.log(LogStatus.FAIL, e);
+		}
+
 	}
 
 }

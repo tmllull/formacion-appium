@@ -6,7 +6,7 @@ public class Test3Options {
 	public String descriptionPath = "com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/et_descripcioNovaObra";
 	public String durationPath = "com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/et_duradaNovaObra";
 	public String pricePath = "com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/et_preuNovaObra";
-	public String title = "CACAHUETE RETURNS";
+	public String title = "CACAHUETE";
 	public String resume = "Bla";
 	public String price = "25";
 	public String duration = "60";

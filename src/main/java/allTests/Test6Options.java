@@ -13,7 +13,7 @@ public class Test6Options {
 	public String filter = "Más opciones";
 	public String dateFilter = "/hierarchy/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView";
 	public HashMap<String,String> filterDays = new HashMap<String, String>();
-	public String filterDay = "Sábado";
+	public String filterDay = "Viernes";
 	public String listViewDate = "com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/mRecyclerViewDies";
 	public String textDate = "android.widget.TextView";
 	
