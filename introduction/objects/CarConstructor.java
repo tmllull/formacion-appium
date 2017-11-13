@@ -19,7 +19,7 @@ public class CarConstructor {
 		bLeftHandDrive = LeftHandDrive;
 	}
 
-	public void DisplayCharacterstics() {
+	public void DisplayCharacteristics() {
 		System.out.println("Model of the Car: " + sModel);
 		System.out.println("Number of gears in the Car: " + iGear);
 		System.out.println("Max speed of the Car: " + iHighestSpeed);

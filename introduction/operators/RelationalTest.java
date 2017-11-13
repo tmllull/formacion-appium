@@ -13,6 +13,13 @@ public class RelationalTest {
 		System.out.println("<<<<<< GREATER THAN OPERATOR >>>>>>");
 		System.in.read();
 		System.in.read();
+		System.out.println("Inicializamos variables:");
+		System.out.println("int Ten = 10;");
+		System.out.println("int Twenty = 20;");
+		System.out.println("int Thirty = 30;");
+		System.in.read();
+		System.in.read();
+		System.out.println("Operador > (mayor -estricto- que)");
 		System.out.println(" Ten > Twenty ==> " + (Ten > Twenty)); // false
 		System.in.read();
 		System.in.read();
@@ -26,6 +33,7 @@ public class RelationalTest {
 		System.out.println("<<<<<< GREATER THAN OR EQUAL TO OPERATOR >>>>>>");
 		System.in.read();
 		System.in.read();
+		System.out.println("Operador >= (mayor o igual que)");
 		System.out.println(" Ten >= Twenty ==> " + (Ten >= Twenty)); // false
 		System.in.read();
 		System.in.read();
@@ -39,6 +47,7 @@ public class RelationalTest {
 		System.out.println("<<<<<< LESS THAN OPERATOR >>>>>>");
 		System.in.read();
 		System.in.read();
+		System.out.println("Operador < (menor -estricto- que)");
 		System.out.println(" Ten < Twenty ==> " + (Ten < Twenty)); // true
 		System.in.read();
 		System.in.read();
@@ -52,6 +61,7 @@ public class RelationalTest {
 		System.out.println("<<<<<< LESS THAN OR EQUAL TO OPERATOR >>>>>>");
 		System.in.read();
 		System.in.read();
+		System.out.println("Operador <= (menor o igual que)");
 		System.out.println(" Ten <= Twenty ==> " + (Ten <= Twenty)); // true
 		System.in.read();
 		System.in.read();
@@ -65,6 +75,7 @@ public class RelationalTest {
 		System.out.println("<<<<<< EQUAL TO OPERATOR >>>>>>");
 		System.in.read();
 		System.in.read();
+		System.out.println("Operador == (igual que)");
 		System.out.println(" Ten == Twenty ==> " + (Ten == Twenty)); // false
 		System.in.read();
 		System.in.read();
@@ -75,10 +86,12 @@ public class RelationalTest {
 		System.out.println("<<<<<< NOT EQUAL TO OPERATOR >>>>>>");
 		System.in.read();
 		System.in.read();
+		System.out.println("Operador != (distinto que)");
 		System.out.println(" Ten != Twenty ==> " + (Ten != Twenty)); // true
 		System.in.read();
 		System.in.read();
 		System.out.println(" Thirty != Twenty + Ten ==> " + (Thirty != Twenty + Ten)); // false
+		System.out.println("FINISH");
 	}
 
 }
