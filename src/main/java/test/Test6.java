@@ -9,7 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import domain.ConfigOptions;
-import domain.Test1Options;
+import domain.Test6Options;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 
@@ -17,11 +17,11 @@ import io.appium.java_client.android.AndroidDriver;
  * General Test
  *
  */
-public class TestBase {
+public class Test6 {
 
 	AppiumDriver driver;
 	ConfigOptions options = new ConfigOptions();
-	Test1Options test1 = new Test1Options();
+	Test6Options test6 = new Test6Options();
 	WebDriverWait wait;
 
 	@Before
@@ -37,7 +37,6 @@ public class TestBase {
 		}
 	}
 
-	//Click on menu bar, initialize data and list shows
 	@Test
 	public void test() throws InterruptedException {
 		
@@ -45,6 +44,7 @@ public class TestBase {
 
 	@After
 	public void closeTest() throws InterruptedException {
-		
+		// Thread.sleep(5000);
+		// driver.quit();
 	}
 }

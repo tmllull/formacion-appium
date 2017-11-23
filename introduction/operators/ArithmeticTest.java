@@ -12,7 +12,7 @@ public class ArithmeticTest {
 		System.in.read();
 		System.in.read();
 		System.out.println("//Inicializamos algunas variables:");
-		System.out.println("int a, b = 10, c = 5;");
+		System.out.println("int a, b = 10, c = 3;");
 		System.in.read();
 		System.in.read();
 		System.out.println("a: NOT INITIALIZED");

@@ -9,7 +9,6 @@ import com.relevantcodes.extentreports.LogStatus;
 import domain.ConfigOptions;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
 
 /**
  * General Test

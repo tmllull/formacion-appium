@@ -15,7 +15,7 @@ public class BooleanTest {
 		// Initialize the boolean variable with value true or false, once boolean
 		// declaration is done
 		System.out.println("//Declaramos un booleaeno y lo inicializamos a true");
-		System.out.println("testResult = true;");
+		System.out.println("boolean testResult = true;");
 		boolean testResult = true;
 		System.in.read();
 		System.in.read();

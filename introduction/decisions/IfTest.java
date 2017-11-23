@@ -18,8 +18,8 @@ public class IfTest {
 		System.in.read();
 		System.in.read();
 		System.out.println("//Mostramos el valor por consola:");
-		System.out.println("sDay value is = " + sDay);
-		System.out.println("iDay value is = " + iDay);
+		//System.out.println("sDay value is = " + sDay);
+		//System.out.println("iDay value is = " + iDay);
 		System.in.read();
 		System.in.read();
 		System.out.println("//Ejemplo de if:");

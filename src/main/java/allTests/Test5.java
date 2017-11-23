@@ -2,15 +2,12 @@ package allTests;
 
 import static org.junit.Assert.*;
 
-import org.junit.Assert;
-
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
 
 /**
  * General Test

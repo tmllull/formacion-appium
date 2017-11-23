@@ -26,7 +26,7 @@ public class LogicalTest {
 		System.in.read();
 		System.in.read();
 		System.out.println("Operador 'or' (||)");
-		System.out.println("(Output_1 || Output_2)");
+		System.out.println("(Output_1 || Output_2);");
 		System.in.read();
 		System.in.read();
 		System.out.println("Check if even one of the boolean varibale is true : " + (Output_1 || Output_2));

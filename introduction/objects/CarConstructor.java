@@ -28,5 +28,9 @@ public class CarConstructor {
 		System.out.println("Transmission of the Car: " + sTransmission);
 
 	}
+	
+	public String getModel() {
+		return sModel;
+	}
 
 }

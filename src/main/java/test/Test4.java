@@ -11,8 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import domain.ConfigOptions;
 import domain.Test4Options;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 
 /**

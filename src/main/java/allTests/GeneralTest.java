@@ -12,11 +12,8 @@ import org.junit.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.relevantcodes.extentreports.DisplayOrder;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
-
 import domain.ConfigOptions;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
