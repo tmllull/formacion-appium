@@ -36,6 +36,9 @@ public class Test4 {
 			el2.click();
 			extendedtest.log(LogStatus.PASS, "Show selected");
 
+			Thread.sleep(200);
+			// TRICK
+			driver.scrollTo("lun., 28/10/2019");
 			// TRICK
 			MobileElement el3 = (MobileElement) driver.findElementByXPath(test4.selectedDateTrickPath);
 			el3.click();
@@ -43,7 +46,7 @@ public class Test4 {
 
 			Thread.sleep(200);
 			// TRICK
-			driver.scrollTo("Seleccionar butacas");
+			driver.scrollTo("Selecciona butacas");
 
 			MobileElement el4 = (MobileElement) driver.findElementById(test4.selectPlacesPath);
 			el4.click();
@@ -66,7 +69,7 @@ public class Test4 {
 			driver.navigate().back();
 			MobileElement el9 = (MobileElement) driver.findElementById(test4.lastNamePath);
 			el9.sendKeys(test4.lastname);
-			extendedtest.log(LogStatus.PASS, "Lastname sended");
+			extendedtest.log(LogStatus.PASS, "Last name sended");
 			driver.navigate().back();
 			MobileElement el10 = (MobileElement) driver.findElementById(test4.confirmPath);
 			el10.click();

@@ -27,7 +27,7 @@ public class Test2 {
 			el2.click();
 			extendedtest.log(LogStatus.PASS, "Show selected correctly");
 
-			MobileElement el3 = (MobileElement) driver.findElementByXPath(test2.selectedDatePath);
+			MobileElement el3 = (MobileElement) driver.findElementByXPath(test2.firstDatePath);
 			el3.click();
 			extendedtest.log(LogStatus.PASS, "Selected date and show info");
 			extendedtest.log(LogStatus.INFO, "Test2 finalized, driver is closed");

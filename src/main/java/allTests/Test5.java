@@ -15,7 +15,7 @@ import io.appium.java_client.MobileElement;
  */
 public class Test5 {
 
-	@SuppressWarnings("deprecation")
+	
 	public Test5(AppiumDriver driver, allTests.Test5Options test5, ExtentReports extentreports, ExtentTest extendedtest)
 			throws InterruptedException {
 		try {
@@ -29,6 +29,8 @@ public class Test5 {
 			MobileElement el2 = (MobileElement) driver.findElementByXPath(test5.selectedShowTrickPath);
 			el2.click();
 			extendedtest.log(LogStatus.PASS, "Show selected");
+			driver.scrollTo("lun., 28/10/2019");
+			extendedtest.log(LogStatus.PASS, "Date found");
 			// TRICK
 			MobileElement el3 = (MobileElement) driver.findElementByXPath(test5.selectedDateTrickPath);
 			el3.click();
@@ -40,7 +42,7 @@ public class Test5 {
 			 * .perform();
 			 */
 
-			driver.scrollTo("Seleccionar butacas");
+			driver.scrollTo("Selecciona butacas");
 
 			MobileElement el20 = (MobileElement) driver.findElementById(test5.pricePath);
 			String priceString = el20.getText();

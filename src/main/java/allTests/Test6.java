@@ -38,6 +38,7 @@ public class Test6 {
 			MobileElement el4 = (MobileElement) driver.findElementByXPath(test6.dateFilter);
 			el4.click();
 			extendedtest.log(LogStatus.PASS, "Day Filter");
+			Thread.sleep(2000);
 			MobileElement el5 = (MobileElement) driver.findElementByXPath(test6.filterDays.get(test6.filterDay));
 			el5.click();
 			extendedtest.log(LogStatus.PASS, "Selected " + test6.filterDay + " filter");
