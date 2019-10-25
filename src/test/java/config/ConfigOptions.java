@@ -13,11 +13,11 @@ public class ConfigOptions {
 	private static final String PLATFORM_VERSION = "5.1.1";
 	private static final String DEVICE_NAME = "Moto G";
 	private static final String APP_PATH = "C:\\Users\\jualvare\\Downloads\\teatre_mallorca_demo.apk";
-//	private static final String DEVICE_UDID = "08eef699f1421cd5"; // NEXUS 5
+	private static final String DEVICE_UDID = "08eef699f1421cd5"; // NEXUS 5
 	//private static final String DEVICE_UDID = "5e29f967"; // NOTE 3
 	//private static final String DEVICE_UDID = "192.168.229.101:5555";
 	//private static final String DEVICE_UDID = "ZY2222KB59"; //MOTO G
-	private static final String DEVICE_UDID = "42002a7dc2bca433";
+//	private static final String DEVICE_UDID = "42002a7dc2bca433"; // SAMSUNG J3
 	//private static final String DEVICE_UDID = "LGD85510583830"; //LG G3
 	//private static final String DEVICE_UDID = "ae63ae53"; //S5
 	//private static final String DEVICE_UDID = "d1a28b45"; // S4

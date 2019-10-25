@@ -27,7 +27,9 @@ public class Test4Options {
 	//PATH FIRST PLACE
 	//"com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/button1";
 	
-	public Test4Options() {
+	public Test4Options(String date, String show) {
+		selectedShowTrickPath = "//android.widget.TextView[@text='"+show+"']";
+		selectedDateTrickPath = "//android.widget.TextView[@text='"+date+"']";
 		setPlacesPath();
 	}
 	

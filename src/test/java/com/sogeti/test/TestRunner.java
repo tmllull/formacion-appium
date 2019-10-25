@@ -30,12 +30,15 @@ public class TestRunner {
 
 	AppiumDriver driver;
 	ConfigOptions options = new ConfigOptions();
+	String date = "lun., 28/10/2019";
+	String filterDay = "lun.";
+	String show = "NUEVA OBRA";
 	Test1Options test1 = new Test1Options();
 	Test2Options test2 = new Test2Options();
-	Test3Options test3 = new Test3Options();
-	Test4Options test4 = new Test4Options();
-	Test5Options test5 = new Test5Options();
-	Test6Options test6 = new Test6Options();
+	Test3Options test3 = new Test3Options("NUEVA OBRA","Test","25","60","23 octubre 2019","31 octubre 2019");
+	Test4Options test4 = new Test4Options(date,show);
+	Test5Options test5 = new Test5Options(date,show);
+	Test6Options test6 = new Test6Options(filterDay,show);
 	WebDriverWait wait;
 	static ExtentReports extentreports;
 	static ExtentTest extendedtest;

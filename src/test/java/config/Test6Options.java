@@ -3,18 +3,22 @@ package config;
 import java.util.HashMap;
 
 public class Test6Options {
+	public String show;
 	public String showListPath = "com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/btMainListShows";
 	public String selectedShowPath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.View/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TextView";
-	public String selectedShowTrickPath = "//android.widget.TextView[@text='NUEVA OBRA']";
+	public String selectedShowTrickPath = "//android.widget.TextView[@text='"+show+"']";
 	public String filter = "Más opciones";
 	public String dateFilter = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[1]";
 	public HashMap<String,String> filterDays = new HashMap<String, String>();
-	public String filterDay = "lun.";
+	public String filterDay;
 	public String listViewDate = "com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/mRecyclerViewDies";
 	public String textDate = "android.widget.TextView";
 	
 	
-	public Test6Options() {
+	public Test6Options(String filterDay, String show) {
+		this.filterDay = filterDay;
+		this.show = show;
+		selectedShowTrickPath = "//android.widget.TextView[@text='"+show+"']";
 		fillFilterDays();
 	}
 	

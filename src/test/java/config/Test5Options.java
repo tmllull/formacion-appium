@@ -22,7 +22,9 @@ public class Test5Options {
 	//PATH FIRST PLACE
 	//"com.example.tonimiquelllullamengual.teatre_idi_nav_bar:id/button1";
 	
-	public Test5Options() {
+	public Test5Options(String date, String show) {
+		selectedDateTrickPath = "//android.widget.TextView[@text='"+date+"']";
+		selectedShowTrickPath = "//android.widget.TextView[@text='"+show+"']";
 		setPlacesPath();
 	}
 	
