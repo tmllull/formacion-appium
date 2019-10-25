@@ -18,11 +18,11 @@ import io.appium.java_client.MobileElement;
 public class Test4 {
 
 	AppiumDriver driver;
-	ConfigOptions options = new ConfigOptions();
-	Test4Options test4 = new Test4Options();
+	//ConfigOptions options = new ConfigOptions();
+	//Test4Options test4 = new Test4Options();
 	WebDriverWait wait;
 
-	public Test4(AppiumDriver driver, config.Test4Options test4, ExtentReports extentreports, ExtentTest extendedtest)
+	public Test4(AppiumDriver driver, Test4Options test4, ExtentReports extentreports, ExtentTest extendedtest)
 			throws InterruptedException {
 		try {
 			extendedtest = extentreports.startTest("Buy tickets");
