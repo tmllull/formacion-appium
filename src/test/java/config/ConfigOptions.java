@@ -50,11 +50,11 @@ public class ConfigOptions {
 	
 	public DesiredCapabilities setCapabilities() {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, getVersion());
-		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, getDeviceName());
-		capabilities.setCapability(MobileCapabilityType.APP,getAppPath());
+//		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, getVersion());
+//		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, getDeviceName());
+//		capabilities.setCapability(MobileCapabilityType.APP,getAppPath());
 		capabilities.setCapability("noReset", true);
-		capabilities.setCapability("udid",getDeviceUdid());
+//		capabilities.setCapability("udid",getDeviceUdid());
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator1");
 		return capabilities;		
 	}
