@@ -16,7 +16,14 @@ public class AppiumUtils {
 	}
 	
 	public boolean takeScreenshot(AppiumDriver driver) {
-		String screenshotDirectory = System.getProperty("appium.screenshots.dir");
+		String screenshotDirectory;
+		if(System.getProperty("appium.screenshots.dir") != null) {
+			screenshotDirectory = System.getProperty("appium.screenshots.dir");
+
+		}
+		else {
+			screenshotDirectory = System.getProperty("user.dir")+"/reports/screenshots";
+		}
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		count ++;
 		return screenshot.renameTo(new File(screenshotDirectory, String.format("%s.png", "screenshot_"+count)));

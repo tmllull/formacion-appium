@@ -12,6 +12,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import utils.AppiumUtils;
 
 /**
  * General Test
@@ -57,8 +58,10 @@ public class Test6 {
 			extendedtest.log(LogStatus.INFO, "Test finalized, driver is closed");
 
 		} catch (Exception e) {
+			new AppiumUtils().takeScreenshot(driver);
 			extendedtest.log(LogStatus.FAIL, e);
 		} catch (AssertionError e) {
+			new AppiumUtils().takeScreenshot(driver);
 			extendedtest.log(LogStatus.FAIL, e);
 		}
 

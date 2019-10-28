@@ -1,5 +1,7 @@
 package com.sogeti.test;
 
+import org.apache.xml.serializer.utils.Utils;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -7,6 +9,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import config.Test1Options;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import utils.AppiumUtils;
 
 /**
  * General Test
@@ -31,8 +34,10 @@ public class Test1 {
 				extendedtest.log(LogStatus.PASS, "Shows list is accessible");
 				extendedtest.log(LogStatus.INFO, "Test1 finalized, driver is closed");
 		} catch (Exception e) {
+			new AppiumUtils().takeScreenshot(driver);
 			extendedtest.log(LogStatus.FAIL, e);
 		}catch (AssertionError e) {
+			new AppiumUtils().takeScreenshot(driver);
 			extendedtest.log(LogStatus.FAIL, e);
 		}
 		
