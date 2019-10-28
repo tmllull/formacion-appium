@@ -34,11 +34,11 @@ public class Test1 {
 				extendedtest.log(LogStatus.PASS, "Shows list is accessible");
 				extendedtest.log(LogStatus.INFO, "Test1 finalized, driver is closed");
 		} catch (Exception e) {
-			new AppiumUtils().takeScreenshot(driver);
-			extendedtest.log(LogStatus.FAIL, e);
+			
+			extendedtest.log(LogStatus.FAIL, e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
 		}catch (AssertionError e) {
 			new AppiumUtils().takeScreenshot(driver);
-			extendedtest.log(LogStatus.FAIL, e);
+			extendedtest.log(LogStatus.FAIL,e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
 		}
 		
 	}

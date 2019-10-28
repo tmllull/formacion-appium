@@ -76,10 +76,10 @@ public class Test3 {
 
 		} catch (Exception e) {
 			new AppiumUtils().takeScreenshot(driver);
-			extendedtest.log(LogStatus.FAIL, e);
+			extendedtest.log(LogStatus.FAIL, e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
 		} catch (AssertionError e) {
 			new AppiumUtils().takeScreenshot(driver);
-			extendedtest.log(LogStatus.FAIL, e);
+			extendedtest.log(LogStatus.FAIL,e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
 		}
 
 	}

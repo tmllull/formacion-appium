@@ -34,10 +34,10 @@ public class Test2 {
 			extendedtest.log(LogStatus.INFO, "Test2 finalized, driver is closed");
 		} catch (Exception e) {
 			new AppiumUtils().takeScreenshot(driver);
-			extendedtest.log(LogStatus.FAIL, e);
+			extendedtest.log(LogStatus.FAIL, e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
 		}catch (AssertionError e) {
 			new AppiumUtils().takeScreenshot(driver);
-			extendedtest.log(LogStatus.FAIL, e);
+			extendedtest.log(LogStatus.FAIL,e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
 		}
 	}
 }
