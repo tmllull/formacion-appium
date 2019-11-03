@@ -1,4 +1,4 @@
-package com.sogeti.test;
+package tests;
 
 import static org.junit.Assert.assertEquals;
 
@@ -21,7 +21,7 @@ import utils.AppiumUtils;
 public class Test6 {
 
 	public Test6(AppiumDriver driver, config.Test6Options test6, ExtentReports extentreports,
-			ExtentTest extendedtest) {
+			ExtentTest extendedtest) throws Exception {
 		try {
 			extendedtest = extentreports.startTest("Day filter");
 			extendedtest.log(LogStatus.INFO, "Driver is up and running " + driver);
@@ -58,11 +58,11 @@ public class Test6 {
 			extendedtest.log(LogStatus.INFO, "Test finalized, driver is closed");
 
 		} catch (Exception e) {
-			new AppiumUtils().takeScreenshot(driver);
 			extendedtest.log(LogStatus.FAIL,e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
+			throw new Exception();
 		} catch (AssertionError e) {
-			new AppiumUtils().takeScreenshot(driver);
 			extendedtest.log(LogStatus.FAIL,e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
+			throw new AssertionError();
 		}
 
 	}

@@ -1,4 +1,4 @@
-package com.sogeti.test;
+package tests;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -15,7 +15,7 @@ import utils.AppiumUtils;
 public class Test2 {
 
 	public Test2(AppiumDriver driver, config.Test2Options test2, ExtentReports extentreports,
-			ExtentTest extendedtest) {
+			ExtentTest extendedtest) throws Exception {
 		try {
 			extendedtest = extentreports.startTest("Select show");
 			 extendedtest.log(LogStatus.INFO, "Driver is up and running " + driver);
@@ -33,11 +33,11 @@ public class Test2 {
 			extendedtest.log(LogStatus.PASS, "Selected date and show info");
 			extendedtest.log(LogStatus.INFO, "Test2 finalized, driver is closed");
 		} catch (Exception e) {
-			new AppiumUtils().takeScreenshot(driver);
 			extendedtest.log(LogStatus.FAIL, e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
+			throw new Exception();
 		}catch (AssertionError e) {
-			new AppiumUtils().takeScreenshot(driver);
 			extendedtest.log(LogStatus.FAIL,e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
+			throw new AssertionError();
 		}
 	}
 }

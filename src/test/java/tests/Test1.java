@@ -1,4 +1,5 @@
-package com.sogeti.test;
+package tests;
+
 
 import org.apache.xml.serializer.utils.Utils;
 
@@ -18,7 +19,7 @@ import utils.AppiumUtils;
 public class Test1 {
 
 		
-	 public Test1(AppiumDriver driver, Test1Options test1, ExtentReports extentreports, ExtentTest extendedtest) {
+	 public Test1(AppiumDriver driver, Test1Options test1, ExtentReports extentreports, ExtentTest extendedtest) throws Exception {
 		 try {
 			 extendedtest = extentreports.startTest("Init data");
 			 extendedtest.log(LogStatus.INFO, "Driver is up and running " + driver);
@@ -34,11 +35,11 @@ public class Test1 {
 				extendedtest.log(LogStatus.PASS, "Shows list is accessible");
 				extendedtest.log(LogStatus.INFO, "Test1 finalized, driver is closed");
 		} catch (Exception e) {
-			
 			extendedtest.log(LogStatus.FAIL, e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
+			throw new Exception();
 		}catch (AssertionError e) {
-			new AppiumUtils().takeScreenshot(driver);
 			extendedtest.log(LogStatus.FAIL,e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
+			throw new AssertionError();
 		}
 		
 	}

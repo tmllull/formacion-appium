@@ -1,4 +1,4 @@
-package com.sogeti.test;
+package tests;
 
 import static org.junit.Assert.*;
 
@@ -18,7 +18,7 @@ public class Test5 {
 
 	
 	public Test5(AppiumDriver driver, config.Test5Options test5, ExtentReports extentreports, ExtentTest extendedtest)
-			throws InterruptedException {
+			throws Exception {
 		try {
 			extendedtest = extentreports.startTest("Compare prices");
 			extendedtest.log(LogStatus.INFO, "Driver is up and running " + driver);
@@ -77,11 +77,11 @@ public class Test5 {
 			extendedtest.log(LogStatus.INFO, "Test finalized, driver is closed");
 
 		} catch (Exception e) {
-			new AppiumUtils().takeScreenshot(driver);
 			extendedtest.log(LogStatus.FAIL,e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
+			throw new Exception();
 		} catch (AssertionError e) {
-			new AppiumUtils().takeScreenshot(driver);
 			extendedtest.log(LogStatus.FAIL,e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
+			throw new AssertionError();
 		}
 	}
 

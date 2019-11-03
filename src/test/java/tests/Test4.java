@@ -1,4 +1,4 @@
-package com.sogeti.test;
+package tests;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -24,7 +24,7 @@ public class Test4 {
 	WebDriverWait wait;
 
 	public Test4(AppiumDriver driver, Test4Options test4, ExtentReports extentreports, ExtentTest extendedtest)
-			throws InterruptedException {
+			throws Exception {
 		try {
 			extendedtest = extentreports.startTest("Buy tickets");
 			extendedtest.log(LogStatus.INFO, "Driver is up and running " + driver);
@@ -64,26 +64,29 @@ public class Test4 {
 			MobileElement el7 = (MobileElement) driver.findElementById(test4.mailPath);
 			el7.sendKeys(test4.mail);
 			extendedtest.log(LogStatus.PASS, "Mail sended");
-			driver.navigate().back();
+			//driver.navigate().back();
+			driver.scrollTo("Nombre");
 			MobileElement el8 = (MobileElement) driver.findElementById(test4.namePath);
 			el8.sendKeys(test4.name);
 			extendedtest.log(LogStatus.PASS, "Name sended");
-			driver.navigate().back();
+			driver.scrollTo("Apellidos");
+			//driver.navigate().back();
 			MobileElement el9 = (MobileElement) driver.findElementById(test4.lastNamePath);
 			el9.sendKeys(test4.lastname);
 			extendedtest.log(LogStatus.PASS, "Last name sended");
-			driver.navigate().back();
+			driver.scrollTo("CONFIRMAR COMPRA");
+			//driver.navigate().back();
 			MobileElement el10 = (MobileElement) driver.findElementById(test4.confirmPath);
 			el10.click();
 			extendedtest.log(LogStatus.PASS, "Buy completed");
 			extendedtest.log(LogStatus.INFO, "Test finalized, driver is closed");
 
 		} catch (Exception e) {
-			new AppiumUtils().takeScreenshot(driver);
 			extendedtest.log(LogStatus.FAIL,e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
+			throw new Exception();
 		} catch (AssertionError e) {
-			new AppiumUtils().takeScreenshot(driver);
 			extendedtest.log(LogStatus.FAIL,e+extendedtest.addScreenCapture(new AppiumUtils().takeScreenshot(driver)));
+			throw new AssertionError();
 		}
 
 	}
